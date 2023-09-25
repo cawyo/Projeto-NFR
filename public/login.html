@@ -5,60 +5,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-         body {
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            background: linear-gradient(135deg, #478cac, #03111d);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-        .login-container {
-            background-color: #F8F8FF;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            width: 400px;
-            text-align: center;
-        }
-        .login-container h2 {
-            margin-bottom: 20px;
-            color: 	#000000;
-        }
-        .login-input {
-            width: 92%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #dddddd;
-            border-radius: 5px;
-            font-size: 16px;
-            color: #555555;
-        }
-        .login-btn {
-            background-color: #483D8B;
-            color: #ffffff;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .login-btn:hover {
-            background-color: #483D8B;
-        }
-        .login-links a {
-            color: #3498db;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .login-links a:hover {
-            color: #2980b9;
-        }
-    </style>
+    <link rel="stylesheet" href="loginStyle.css">
 </head>
 <body>
     <div class="login-container" style="margin: 10%;">
@@ -87,62 +34,7 @@
         </div>
     </div>
 
-    <script>
-        var users = [];
-        const loginForm = document.getElementById('login-form');
-        const signupLink = document.getElementById('signup-link');
-        const signupContainer = document.getElementById('signup-container');
-        const signupForm = document.getElementById('signup-form');
-        const loginLink = document.getElementById('login-link');
-        const forgotPasswordLink = document.getElementById('forgot-password-link');
+    <script src="telaLogin.js">
 
-        signupLink.addEventListener('click', () => {
-            loginForm.style.display = 'none';
-            signupContainer.style.display = 'block';
-        });
-
-        loginLink.addEventListener('click', () => {
-            loginForm.style.display = 'block';
-            signupContainer.style.display = 'none';
-        });
-
-        signupForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const nomeInput = signupForm.querySelector('#username');
-            const emailInput = signupForm.querySelector('#email');
-            const senhaInput = signupForm.querySelector('#password');
-
-            const newUser = {
-                username: nomeInput.value,
-                email: emailInput.value,
-                password: senhaInput.value
-            };
-
-            users.push(newUser);
-
-            alert('Cadastro realizado com sucesso!');
-        });
-
-        loginForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const usernameInput = loginForm.querySelector('#username');
-            const passwordInput = loginForm.querySelector('#password');
-            const username = usernameInput.value;
-            const password = passwordInput.value;
-
-            const user = users.find(user => user.username === username && user.password === password);
-
-            if (user) {
-                alert('Login realizado com sucesso!');
-
-                window.location.href = 'home.html';
-            } else {
-                alert('Usuário não cadastrado ou senha incorreta.');
-            }
-        });
-
-        forgotPasswordLink.addEventListener('click', () => {
-            alert('Você receberá instruções de redefinição de senha por e-mail.');
-        });
     </script>
 </body>
