@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        body {
-            background-image: url('../resources/mapamundi.jpg');
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-    </style>
+    <link rel="stylesheet" href="homeStyle.css">
+    <title>Home</title>
 </head>
-<body>
-    <header>
-        <a href="#"><img src="../resources/perfil.png" alt="perfil"></a>
-        <nav class="nav">
-            <ul>
-                <li><img src="../resources/estrela.png" alt="favorito"></li>
-                <li><img src="../resources/menu.png" alt="menu"></li>
-            </ul>
-        </nav>
-    </header>
+<body background="../resources/mapamundi.jpg">
+    <div class="navbar">
+        <div class="user-info">
+            <img src="../resources/perfil.png" alt="Foto de Perfil">
+            <span>Username</span>
+        </div>
+        <div class="favMenu">
+                <img src="../resources/estrela.png" alt="fav" class="estrelaImg">
+                <img src="../resources/menu.png" alt="Ícone do Menu" class="menuImg">
+        </div>
+    </div>
+    <div class="pesquisa">
+        <img src="../resources/search.png" alt="">
+        <input type="text" class="caixaPesquisa" placeholder="Para onde deseja ir?">
+    </div>
+    <div class="circulo">
+        <img src="../resources/telefone.png" alt="" class="telefoneImg">
+    </div>
+    <div class="circulo2"></div>
 </body>
 </html>
